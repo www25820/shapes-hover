@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6 个图形盒子 hover 效果</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #1d1b1a;
+        }
+        .stage{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 56px;
+            padding: 56px 32px;
+        }
+        .cube{
+            width: 170px;
+            height: 170px;
+            transition: transform .3s ease;   /* 平滑过渡 */
+        }
+        .cube:hover{
+            transform: translateY(-10px);     /* 统一上移 10px */
+        }
+        /* ① 正圆形 · 橙红渐变 */
+        .c1{
+            border-radius: 50%;
+            background: linear-gradient(135deg,#ff9a56,#ff5e62);
+            box-shadow: 0 10px 24px rgba(255, 94, 98, .35);
+        }
+        /* ② 方形 · 青绿渐变 · 小圆角 */
+        .c2{
+            border-radius: 12px;
+            background: linear-gradient(135deg,#2dd4bf,#10b981);
+            box-shadow: 0 10px 24px rgba(16, 185, 129, .35);
+        }
+        /* ③ 方形 · 紫灰渐变 · 大圆角 */
+        .c3{
+            border-radius: 32px;
+            background: linear-gradient(135deg,#a78bfa,#6b7280);
+            box-shadow: 0 10px 24px rgba(167, 139, 250, .35);
+        }
+        /* ④ 正圆形 · 黄橙渐变 */
+        .c4{
+            border-radius: 50%;
+            background: linear-gradient(135deg,#fbbf24,#f97316);
+            box-shadow: 0 10px 24px rgba(249, 115, 22, .35);
+        }
+        /* ⑤ 方形 · 绿蓝渐变 · 中等圆角 */
+        .c5{
+            border-radius: 24px;
+            background: linear-gradient(135deg,#34d399,#3b82f6);
+            box-shadow: 0 10px 24px rgba(59, 130, 246, .35);
+        }
+        /* ⑥ 正圆形 · 浅紫渐变 */
+        .c6{
+            border-radius: 50%;
+            background: linear-gradient(135deg,#e9d5ff,#c4b5fd);
+            box-shadow: 0 10px 24px rgba(196, 181, 253, .35);
+        }
+    </style>
+</head>
+<body>
+    <div class="stage">
+        <div class="cube c1"></div>
+        <div class="cube c2"></div>
+        <div class="cube c3"></div>
+        <div class="cube c4"></div>
+        <div class="cube c5"></div>
+        <div class="cube c6"></div>
+    </div>
+</body>
+</html>
